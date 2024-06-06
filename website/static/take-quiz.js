@@ -6,7 +6,6 @@ function highlightSelectedAnswer(radio){
         answer.style.backgroundColor = 'white';
      });
 
-    console.log("Jebać ci matke")
     if(radio.checked){
         radio.parentNode.style.backgroundColor = '#d1d1d1';
     }

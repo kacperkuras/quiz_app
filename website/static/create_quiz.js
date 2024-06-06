@@ -71,7 +71,6 @@ function addAnswer(questionDiv){
     const answerDiv = document.createElement('div');
     answerDiv.className = "ans"
     const answerCounter = questionDiv.querySelector('#counter');
-    console.log(answerCounter)
     answerCount = parseInt(answerCounter.value);
     answerCount++;
     answerCounter.value = answerCount;
@@ -131,7 +130,7 @@ function remakeAnswers(questionDiv, amount, values, checkedOne){
         answers[i].querySelector(".ans_text").value = values[i];
         if (checkedOne == i){
             answers[i].querySelector('input[type="radio"]').checked = true;
-            answers[i].querySelector('input[type="radio"]').parentNode.style.backgroundColor = '#00ff00';
+            answers[i].querySelector('input[type="radio"]').parentNode.style.backgroundColor = '#aaff80';
         }
     }
 
@@ -180,13 +179,12 @@ function removeAnswer(answerBtn){
 
 
 function highlightRightAnswer(radioBtn){
-    console.log("RUCHAM CI MATKE");
     let radioButtons = radioBtn.parentNode.parentNode.parentNode.querySelectorAll('input[type="radio"]');
     radioButtons.forEach(btn => {
         btn.parentNode.style.backgroundColor = '';
     });
     if (radioBtn.checked){
-        radioBtn.parentNode.style.backgroundColor = '#00ff00';
+        radioBtn.parentNode.style.backgroundColor = '#aaff80';
         radioBtn.checked = true;
     }
     else{
@@ -210,7 +208,7 @@ function remakeQuiz(quiz = {}){
             if(quiz['questions'][i]['correct_answer'] !== null){
                 if(quiz['questions'][i]['correct_answer'] == j+1){
                     answerDiv.querySelector('input[type="radio"]').checked = true;
-                        answerDiv.querySelector('input[type="radio"]').parentNode.style.backgroundColor = '#00ff00';
+                        answerDiv.querySelector('input[type="radio"]').parentNode.style.backgroundColor = '#aaff80';
                 }
             }
             answerDiv.querySelector('input[type="text"]').value = quiz['questions'][i]['answers'][j];

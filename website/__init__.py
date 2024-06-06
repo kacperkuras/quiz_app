@@ -5,8 +5,8 @@ from sqlalchemy_utils import database_exists, create_database
 from flask_login import LoginManager
 
 db = SQLAlchemy()
-DB_USER_NAME = 'root'
-DB_PASSWORD = ''
+DB_USER_NAME = 'quiz'
+DB_PASSWORD = 'Kacper/12'
 DB_HOST_NAME = 'localhost'
 DB_NAME = 'quiz_app'
 

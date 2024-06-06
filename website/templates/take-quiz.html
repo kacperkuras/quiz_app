@@ -8,7 +8,7 @@
 
 
 {% block content %}
-    <header>Rozwiąż quiz</header>
+    <header>{{ quiz.title }}</header>
     <form action="/submit-quiz" method="POST">
         <input type="hidden" name="quiz-id" value="{{ quiz.id }}">
         <input type="hidden" name="result-id" value="{{ result_id }}">
