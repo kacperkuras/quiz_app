@@ -77,7 +77,7 @@ function addAnswer(questionDiv){
 
     answerDiv.innerHTML = `
         <input type="radio" name="correct-${questionDiv.id}" value="answer-${answerCount}" onchange="highlightRightAnswer(this)">
-        <input type="text" class="ans_text input-small" placeholder="Odpiwedż nr ${answerCount}" name="${questionDiv.id}-answer-${answerCount}">
+        <input type="text" class="ans_text input-small" placeholder="Odpowiedź nr ${answerCount}" name="${questionDiv.id}-answer-${answerCount}">
         <button type="button" class="delete-btn-small" onclick="removeAnswer(this)">&times;</button>
     `;
 
